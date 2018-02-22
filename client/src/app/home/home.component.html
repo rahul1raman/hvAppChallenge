@@ -1,0 +1,26 @@
+<div class="col-md-6 col-md-offset-3">
+    <h1>Hi {{currentUser.firstName}}!</h1>
+    <p>You're logged in now.</p>
+    <p><a [routerLink]="['/login']" class="btn btn-primary">Logout</a></p>
+    
+        <h2>Save Info to Database</h2>
+        <div class="panel panel-primary">
+            <div class="panel-body">
+              <form (ngSubmit)="saveToDB()">
+                <div class="form-group">
+                  <label class="col-md-6">First Name</label>
+                  <input type="text" class="form-control" name="firstName" [(ngModel)]="name.firstName" #firstName="ngModel"/>
+                </div>
+                <div class="form-group">
+                  <label class="col-md-6">Last Name</label>
+                  <input type="text" class="form-control" name="lastName" [(ngModel)]="name.lastName" #lastName="ngModel"/>
+                  </div>
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Update</button>
+                  </div>
+                  <div *ngIf="saved" class="help-block">Saved to Database</div>
+              </form>
+            </div>
+          </div>    
+</div>
+
