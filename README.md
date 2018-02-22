@@ -11,5 +11,5 @@ To start server:
 To start the client:
 
 1. Navigate to /client folder and then `npm install`.
-2. Run `npm start` or `ng serve --open`. A browser window should automatically open to the application.
+2. Run `npm start` or `ng serve --open`. By default, it starts on http://localhost:4200.
 
